@@ -3,53 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Website</title>
+  <title>Twin Electrical Services</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="#" class="tablink" onclick="openPage('home')">HOME</a></li>
-      <li><a href="#" class="tablink" onclick="openPage('about')">ABOUT US</a></li>
-      <li><a href="#" class="tablink" onclick="openPage('services')">SERVICES</a></li>
-      <li><a href="#" class="tablink" onclick="openPage('galleries')">GALLERIES</a></li>
-    </ul>
-  </nav>
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="logo.png" alt="Logo">
+        <span>Brand Name Slogan</span>
+      </div>
+      <ul>
+        <li><a href="#" class="tablink" onclick="openPage('home')">HOME</a></li>
+        <li><a href="#" class="tablink" onclick="openPage('about')">ABOUT US</a></li>
+        <li><a href="#" class="tablink" onclick="openPage('services')">OUR SERVICES</a></li>
+        <li><a href="#" class="tablink" onclick="openPage('galleries')">GALLERIES</a></li>
+        <li><a href="#" class="tablink" onclick="openPage('reviews')">REVIEWS</a></li>
+        <li><a href="#" class="tablink" onclick="openPage('contact')">CONTACT</a></li>
+        <li><a href="#" class="tablink" onclick="openPage('login')">LOGIN</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <div id="home" class="tabcontent">
-    <h1>Welcome to Home Page</h1>
-    <p>This is the home page content.</p>
-  </div>
+  <main>
+    <section id="home" class="tabcontent">
+      <div class="hero">
+        <h1>Welcome to Twin Electrical Services</h1>
+        <p>Welcome to the official website of Twin Electrical Service.<br>Se Habla Español</p>
+        <button>Visit us to know more</button>
+      </div>
+    </section>
 
-  <div id="about" class="tabcontent">
-    <h1>About Us</h1>
-    <p>This is the about us page content.</p>
-  </div>
+    <section id="about" class="tabcontent">
+      <h1>About Us</h1>
+      <p>This is the about us page content.</p>
+    </section>
 
-  <div id="services" class="tabcontent">
-    <h1>Our Services</h1>
-    <p>This is the services page content.</p>
-  </div>
+    <section id="services" class="tabcontent">
+      <h1>Our Services</h1>
+      <p>fix, adjust, set up, initialize, etc</p>
+      <div class="services-container">
+        <div class="service-box">
+          <h2>Fixing</h2>
+          <p>we can fix your issue. Temporary paragraphs here to be filled in later</p>
+        </div>
+        <div class="service-box">
+          <h2>Installing</h2>
+          <p>we can fix your issue. Temporary paragraphs here to be filled in later</p>
+        </div>
+        <div class="service-box">
+          <h2>Setting up</h2>
+          <p>we can fix your issue. Temporary paragraphs here to be filled in later</p>
+        </div>
+      </div>
+    </section>
 
-  <div id="galleries" class="tabcontent">
-    <h1>Galleries</h1>
-    <p>This is the galleries page content.</p>
-  </div>
+    <!-- Add more sections for galleries, reviews, contact, and login as needed -->
+  </main>
 
-  <script>
-    function openPage(pageName) {
-      var i;
-      var x = document.getElementsByClassName("tabcontent");
-      for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-      }
-      document.getElementById(pageName).style.display = "block";
-    }
-
-    // Open the default tab (HOME) when the page loads
-    document.addEventListener("DOMContentLoaded", function() {
-      openPage('home');
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>

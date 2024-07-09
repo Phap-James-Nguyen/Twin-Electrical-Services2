@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Website</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#" class="tablink" onclick="openPage('home')">HOME</a></li>
+      <li><a href="#" class="tablink" onclick="openPage('about')">ABOUT US</a></li>
+      <li><a href="#" class="tablink" onclick="openPage('services')">SERVICES</a></li>
+      <li><a href="#" class="tablink" onclick="openPage('galleries')">GALLERIES</a></li>
+    </ul>
+  </nav>
+
+  <div id="home" class="tabcontent">
+    <h1>Welcome to Home Page</h1>
+    <p>This is the home page content.</p>
+  </div>
+
+  <div id="about" class="tabcontent">
+    <h1>About Us</h1>
+    <p>This is the about us page content.</p>
+  </div>
+
+  <div id="services" class="tabcontent">
+    <h1>Our Services</h1>
+    <p>This is the services page content.</p>
+  </div>
+
+  <div id="galleries" class="tabcontent">
+    <h1>Galleries</h1>
+    <p>This is the galleries page content.</p>
+  </div>
+
+  <script>
+    function openPage(pageName) {
+      var i;
+      var x = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      document.getElementById(pageName).style.display = "block";
+    }
+
+    // Open the default tab (HOME) when the page loads
+    document.addEventListener("DOMContentLoaded", function() {
+      openPage('home');
+    });
+  </script>
+</body>
+</html>

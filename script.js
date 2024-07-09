@@ -1,14 +1,18 @@
 function openPage(pageName) {
-    var i;
-    var x = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < x.length; i++) {
-      x[i].style.display = "none";
-    }
-    document.getElementById(pageName).style.display = "block";
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
   }
-  
-  // Open the default tab (HOME) when the page loads
-  document.addEventListener("DOMContentLoaded", function() {
-    openPage('home');
-  });
-  
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].classList.remove("active");
+  }
+  document.getElementById(pageName).style.display = "block";
+  event.currentTarget.classList.add("active");
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  openPage('home');
+  document.querySelector('.tablink').classList.add('active');
+});

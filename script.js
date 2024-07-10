@@ -15,4 +15,19 @@ function openPage(pageName) {
 document.addEventListener("DOMContentLoaded", function() {
   openPage('home');
   document.querySelector('.tablink').classList.add('active');
+
+
+  const welcomeSection = document.getElementById('welcome');
+  const welcomeOffset = welcomeSection.offsetTop;
+  const windowHeight = window.innerHeight;
+
+  function fadeInOnScroll() {
+    if (window.pageYOffset > welcomeOffset - windowHeight + 100) {
+      welcomeSection.style.opacity = '1';
+      welcomeSection.style.transform = 'translateY(0)';
+    }
+  }
+
+  window.addEventListener('scroll', fadeInOnScroll);
+  fadeInOnScroll();
 });

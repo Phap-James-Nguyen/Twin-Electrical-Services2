@@ -1,8 +1,11 @@
-body {
+  body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+  }
+  main {
+    padding-top: 70px; /* Adjust this value based on your header height */
   }
   
   header {
@@ -69,6 +72,7 @@ body {
   justify-content: center;
   text-align: center;
   color: white;
+  padding-top: 70px;
 }
 
 .hero-content {
@@ -99,6 +103,11 @@ body {
     display: none;
     padding: 60px 20px;
   }
+
+  #home {
+    display: block;
+    min-height: 100vh;
+  }
   
   .services-container {
     display: flex;
@@ -118,13 +127,13 @@ body {
     margin-top: 0;
   }
 
-  #welcome {
+  /*#welcome {
     padding: 80px 0;
     background-color: #f8f8f8;
-    opacity: 0;
+    opacity: 1;
     transform: translateY(20px);
     transition: opacity 0.5s ease, transform 0.5s ease;
-  }
+  }*/
   
   #welcome .container {
     max-width: 1200px;
